@@ -1,0 +1,59 @@
+#class{
+    @include pgap(80px,0px,0,0);
+    .heading5 {
+        h2 {
+            @include fonts('Oswald',22px,400,$primarycolor);
+            text-transform: uppercase;
+        }
+    }
+    .class_cetagory {
+        background-color: #f1f1f1;
+        @include mgap(30px,30px,0,0);
+        .mixitup-control-active{
+            background-color: red;
+            color: #fff;
+        }
+        button{
+            @include pgap(20px,20px,71px,60px);
+            background-color: transparent;
+            border: none;
+            @include fonts('Oswald',14px,400,$primarycolor);
+            text-transform: uppercase;
+            transition: all linear.3s;
+            
+            &:hover{
+                background-color: $randombg;
+                color: #fff;
+            }
+            
+            
+        }
+    }
+    .class_item {
+        @include mgap(0px,24px,0,0);
+        background-color: #f1f1f1;
+        @include pgap(50px,50px,43px,43px);
+        transition: all linear .3s;
+        h4{
+            @include fonts('Open Sans',16px,400,$primarycolor);
+            text-transform: capitalize;
+            @include pgap(0px,10px,0,0);
+            transition: all linear .3s;
+        }
+        p{
+            @include fonts('Open Sans',14px,400,$primarycolor );
+            @include pgap(10px,0px,0,0 );
+            transition: all linear .3s;
+        }
+        &:hover{
+            background-color: $randombg;
+        }
+        &:hover h4{
+            color: #fff;
+        }
+        &:hover p{
+            color: #fff;
+        }
+        
+    }
+}

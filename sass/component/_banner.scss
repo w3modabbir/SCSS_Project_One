@@ -1,0 +1,118 @@
+#banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(../images/banner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include pgap(255px,115px,0,0);
+    .banner_slider{
+        .banner_text{
+            h2{
+                @include fonts('Oswald',30px,700,#f1f1f1);
+                text-transform: uppercase;
+                position: relative;
+                &:after{
+                    position: absolute;
+                    content: '';
+                    top: 50%;
+                    left: 76px;
+                    width: 190px;
+                    height: 3px;
+                    transform: translateY(-50%);
+                    background-color: $randombg;
+                    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+                }
+                &:before{
+                    position: absolute;
+                    content: '';
+                    top: 50%;
+                    right: 76px;
+                    width: 140px;
+                    height: 3px;
+                    transform: translateY(-50%);
+                    background-color: $randombg;
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 12% 100%);
+                }
+            }
+            h1{
+                @include fonts('Oswald',60px,700,$randombg);
+                text-transform: uppercase;
+                @include pgap(30px,30px,0,0);
+            }
+            p{
+                @include fonts('Open Sans',14px,400,#f1f1f1);
+                line-height: 22px;
+                padding: 0 85px;
+                position: relative;
+                &:after{
+                    position: absolute;
+                    content: '';
+                    bottom: -136px;
+                    left: 75px;
+                    width: 3px;
+                    height: 200px;
+                    transform: translateY(-50%);
+                    background-color: $randombg;
+                }
+                &:before{
+                    position: absolute;
+                    content: '';
+                    bottom: -133px;
+                    right: 75px;
+                    width: 3px;
+                    height: 198px;
+                    transform: translateY(-50%);
+                    background-color: $randombg;
+                }
+            }
+            .banner_btn{
+                @include pgap(30px,10px,0,0);
+                position: relative;
+                &:after{
+                    position: absolute;
+                    content: '';
+                    top: 33px;
+                    left: 76px;
+                    width: 95px;
+                    height: 3px;
+                    background-color: $randombg;
+                    clip-path: polygon(0 0, 100% 0, 89% 100%, 0 100%);
+                }
+                &:before{
+                    position: absolute;
+                    content: '';
+                    top: 33px;
+                    right: 76px;
+                    width: 65px;
+                    height: 3px;
+                    background-color: $randombg;
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 12% 100%);
+                }
+                a{
+                    @include fonts('Oswald',16px,500,#f1f1f1);
+                    text-transform: uppercase;
+                    background-color: $randombg;
+                    @include pgap(10px,10px,20px,20px);
+                    border: 1px solid $randombg;
+                    transition: all linear .3s;
+                    @include mgap(0,0,0px,20px);
+                    &:hover{
+                        border: 1px solid #f1f1f1;
+                        background-color: transparent;
+                    }
+                   
+                }
+                .btn_0 {
+                    background-color: transparent !important;
+                    border: 1px solid #f1f1f1;
+                    &:hover{
+                        background-color: $randombg !important;
+                        border: 1px solid $randombg;
+                    }
+                    
+                } 
+            }
+             
+        }
+    }
+}
+

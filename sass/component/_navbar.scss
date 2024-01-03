@@ -1,0 +1,51 @@
+.navbar {
+    padding: 0;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    background: rgba(13, 13, 13, 0.8) !important;
+    .navbar-brand{
+        position: absolute;
+        background-color: $logobg;
+        @include pgap(10px,10px,40px,40px);
+        clip-path: polygon(18% 0, 100% 0, 87% 100%, 0% 100%);
+    }
+    .navbar-nav{
+        .nav-item{
+            @include pgap(0px,0px,0px,0px);
+            line-height: 30px;
+            transition: all linear .3s;
+            &:hover{
+                background-color: #fff;
+                .nav-link{
+                    color: $primarycolor;
+                }
+                
+            }
+            .nav-link{
+                padding-right: 10px;
+                padding-left: 10px;
+                @include fonts('Oswald',14px,400,#f1f1f1);
+                text-transform: uppercase;
+                transition: all linear .3s;
+                position: relative;
+                &::after{
+                    position: absolute;
+                    content: '';
+                    bottom: 0px;
+                    left: 0;
+                    width: 0%;
+                    height: 3px;
+                    background: $randombg;
+                    transition: all linear .3s;
+                    
+                }
+                &:hover::after{
+                    width: 100%;
+                }
+                
+            }
+        }
+    }
+}

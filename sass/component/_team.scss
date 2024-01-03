@@ -1,0 +1,89 @@
+#team{
+    @include pgap(80px,0px,0,0);
+    .heading2 {
+        @include pgap(0px,50px,0,0);
+        h2{
+            @include fonts('Oswald',22px,400,$primarycolor);
+            text-transform: uppercase;
+        }
+    }
+    .team_item {
+        transition: all linear .3s;
+        .team_img {
+        background-color: #f1f1f1;
+        @include pgap(10px,0,0,0);
+        position: relative;
+        .team_img_overlay {
+            position: absolute;
+                content: '';
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                width: 90%;
+                height: 90%;
+                background-color: rgba(226, 62, 56, 0.5);
+                border: 5px solid #fff;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+                flex-direction: column;
+                opacity: 0;
+                transition: all linear .3s;
+                a{
+                    border: 1px solid #fff;
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                    color: #fff;
+                    font-size: 18px;
+                    @include mgap(0,10px,0,10px);
+                    transition: all linear .3s;
+                    &:hover{
+                        background-color: #fff;
+                        color: #1da0f2;
+                    }
+                }
+        }
+            
+        }
+        .team_text {
+            transition: all linear .3s;
+            h3{
+                @include fonts('Oswald',22px,400,$primarycolor);
+                text-transform: uppercase;
+                @include mgap(20px,10px,0,0px);
+            }
+            h4{
+                @include fonts('Oswald',22px,400,$primarycolor);
+                text-transform: capitalize;
+                @include mgap(0px,15px,0,0px);
+            }
+            .team_text2 {
+                margin-top: -50px;
+                opacity: 0;
+                transition: all linear .3s;
+                @include mgap(0px,20px,0,0px);
+                p{
+                    @include fonts('Open Sans',14px,400,$paracolor);
+                    line-height: 18px;
+                }
+            }
+        }
+        &:hover .team_text2 {
+            margin-top: 0;
+            opacity: 1;
+        }
+        &:hover .team_text {
+            border: 2px solid #f1f1f1;
+        }
+        
+        &:hover .team_img_overlay {
+            opacity: 1;
+        }
+        &:hover {
+            margin-top: -30px;
+        }
+
+    }
+}

@@ -1,0 +1,74 @@
+#membership{
+    @include pgap(80px,0px,0,0);
+    .heading4 {
+        @include pgap(0px,50px,0,0);
+        h2 {
+            @include fonts('Oswald',22px,400,$primarycolor);
+            text-transform: uppercase;
+        }
+    }
+    .member_item {
+        background-color: #f1f1f1;
+        .member_head{
+            transition: all linear .3s;
+            h2{
+                @include fonts('Oswald',20px,700,$primarycolor);
+                text-transform: uppercase;
+                @include pgap(20px,20px,0,0); 
+                transition: all linear .3s; 
+            }
+        }
+        .member_img{
+            position: relative;
+            .member_overlay{
+                position: absolute;
+                content: '';
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                h4{
+                    @include fonts('Oswald',40px,500,#fff); 
+                    span{
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+        .member_pra{
+            @include pgap(35px,0px,0,0);
+            ul{
+                li{
+                    @include fonts('Open Sans',14px,400,#444);
+                    @include pgap(0px,15px,0,0);
+                }
+            }
+        }
+        .member_btn{
+            background-color: #ddd;
+            @include pgap(10px,10px,0,0);
+            transition: all linear .3s;
+            a{
+                @include fonts('Oswald',16px,400,$primarycolor);  
+                text-transform: uppercase;
+                transition: all linear .3s;
+            }
+        }
+        &:hover .member_head{
+            background-color: $randombg;
+        }
+        &:hover .member_head h2{
+            color: #fff;
+        }
+        &:hover .member_btn{
+            background-color: $randombg;
+        }
+        &:hover .member_btn a{
+            color: #fff;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+#testi{
+    @include pgap(80px,0px,0,0);
+    .heading3 {
+        @include pgap(0px,50px,0,0);
+        h2{
+            @include fonts('Oswald',22px,400,$primarycolor);
+            text-transform: uppercase;
+        }
+    }
+    .testi_main {
+        background: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url(../images/testi-banner.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include pgap(30px,80px,0,0);
+        .testi_item {
+            p{
+                @include fonts('Open Sans',13px,400,#fff);
+                line-height: 18px;
+                @include pgap(10px,0px,0px,0);
+            }
+            .testi_item2 {
+                display: flex;
+                .testi_text{
+                    @include pgap(0px,0px,10px,0);
+                    h3{
+                        @include fonts('Oswald',14px,400,#fff);
+                        text-transform: uppercase;
+                        @include pgap(0px,10px,0,0);
+                    }
+                    h5{
+                        @include fonts('Oswald',14px,400,#fff);
+                        text-transform: capitalize;
+                        @include pgap(0px,10px,0,0);
+                    }
+                    i{
+                        color: $secondarycolor;
+                    }
+                }
+            }
+           
+        }
+    }
+}

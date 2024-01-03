@@ -1,0 +1,20 @@
+#counter {
+    background: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)),  url(../images/counter-banner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include pgap(45px,45px,0,0);
+    @include mgap (80px,0px,0,0);
+    .counter_item {
+        text-align: center !important;
+        h3{
+            @include fonts('Oswald',40px,700,#fff);
+            @include pgap(0px,20px,0,0);
+            
+        }
+        h5{
+            @include fonts('Oswald',18px,400,#fff);
+            text-transform: uppercase;
+        }
+    }
+}

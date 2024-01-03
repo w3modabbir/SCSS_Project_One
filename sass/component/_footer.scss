@@ -1,0 +1,119 @@
+#footer {
+    background: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url(../images/footer-banner.jpg);
+    @include pgap(30px,20px,0,0);
+    .footer_logo {
+        @include pgap(0,27px,0,0);
+        border-bottom: 1px solid #fff;
+    }
+    .foot_main {
+        border-bottom: 1px solid #fff;
+        @include pgap(30px,0px,0,0);
+        .foot_head{
+            h3{
+                @include fonts('Oswald',14px,400,#fff);
+                text-transform: uppercase;
+                @include pgap(0px,30px,0,0);
+            }
+        }
+        .footer_frist{
+            display: flex;
+            .foot_one{
+                @include pgap(0,0px,0px,25px);
+                h4{
+                    @include fonts('Open Sans',14px,400,#fff);
+                    @include pgap(0,10px,0px,20px);
+                    text-transform: capitalize
+                }
+            }
+            .foot_two{
+                p{
+                    @include fonts('Open Sans',14px,400,#fff);
+                    @include pgap(0,10px,0px,0px);
+                }
+            }
+        }
+        .footer_secoun {
+            display: flex;
+            .foot_sec1{
+                @include pgap(0,0px,0px,15px);
+                i{
+                    color: #1a90d9;
+                    font-size: 20px;
+                }
+                .down {
+                    @include pgap(97px,0px,0px,0px);
+                }
+            }
+            .foot_sec2 {
+                p{
+                    @include fonts('Open Sans',14px,400,#fff);
+                    line-height: 22px; 
+                    padding-right: 17px;
+                }
+                .p_1{
+                    @include pgap(30px,0px,0px,0px);
+                }
+            }
+        }
+        .footer_third {
+            .foot_img{
+                @include mgap(0,7px,0,0px)
+            }
+        }
+        .foot_right_main{
+            .foot_right {
+                display: flex;
+                .foot_right1 {
+                    @include pgap(0,0px,0,10px);
+                    .foot_icon1{
+                        @include pgap(0,25px,0,0px);
+                        i{
+                            color: $randombg;
+                            font-size: 20px;
+                        }
+                    }
+                }
+                .foot_right2 {
+                    .foot_pra{
+                        @include pgap(0,42px,0,0px);
+                        p{
+                            @include fonts('Open Sans',14px,400,#fff);
+                        }
+                    }
+                    
+                }
+            }
+            .socile_right {
+                @include pgap(0,30px,0,0px);
+                i{
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                    border: 1px solid #fff;
+                    color: #fff;
+                    font-size: 18px;
+                    @include mgap(0,0px,3px,3px);
+                    transition: all linear .3s;
+                    &:hover {
+                        background: $randombg;
+                        border-color:$randombg ;
+                    }
+                }
+
+            }
+        }
+    }
+    .copy {
+        @include mgap(15px,0px,0px,0px);
+        .copyright {
+            p{
+                @include fonts('Open Sans',13px,400,#fff);
+                span{
+                    color: $randombg;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
